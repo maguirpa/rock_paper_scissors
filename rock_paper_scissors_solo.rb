@@ -2,6 +2,8 @@
 puts "\n=====>Welcome to the Rock Paper Scissors Challenge!<====="
 
 CHOICES = {'Paper' => 'p', 'Rock' => 'r', 'Scissors' => 's'}
+replay = ' '
+game_over = false
 
 def winning_message(message)
   case message
@@ -15,14 +17,14 @@ def winning_message(message)
 end
 
 puts "What's your name?"
-name = gets.chomp.capitalize
+name = gets.chomp.capitalize!
 
-begin # Overall game
+while replay != 'n' # Overall game
   computer_choice = CHOICES.values.sample
   user_wins = 0
   computer_wins = 0
 
-  begin # Current game
+   while game_over != true  # current game
     double_or_nothing = false
     game_over = false
 
@@ -79,18 +81,15 @@ begin # Overall game
       end
     end
 
-  end while game_over != true  # current game
+  end #current game
 
   begin
     puts "\nWould you like to play again? (y/n)"
     replay = gets.chomp.downcase
   end until replay == 'y' || replay == 'n'
 
-end while replay != 'n'  #overall game
+end   #overall game
 
 puts "\nOK. Thanks for playing #{name}. Hope you had a good time."
-
-
-
 
 
