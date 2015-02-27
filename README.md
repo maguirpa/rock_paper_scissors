@@ -1,1 +1,2 @@
 # rock_paper_scissors
+Class Assignment for Rocks Paper Scissors.  The game ending with solo is my attempt after watching and coding along with the initial solution video.  Really took my time with the solution video and was able to recreate the game with a "Double or Nothing" feature. 
